@@ -1,0 +1,41 @@
+<!--{% extends 'bootstrap/base.html' %}-->
+
+{% block title %}
+    MoCode
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content%}
+    <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxldHRlcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="img">
+        <h1 class="custom-font">Get any string converted to<br> a morse code in seconds!</h1>
+    </div>
+  <form method="post">
+  <div class="row form-container">
+      <input class="col a" type="text" id="textInput" name="textInput" placeholder="Your Text">
+      <input class="col b" type="submit" value="Enter">
+  </div>
+  </form>
+{% if output %}
+     <div class="output-container" id="output">
+         <p>{{ output }}</p>
+     </div>
+{% endif %}
+
+<!--    <script src="{{ url_for('static', filename='script.js') }}"></script>-->
+{% endblock %}
+
+<!--{% block footer %}-->
+<!--    <div id="footer">-->
+<!--      &copy; Copyright 2023 by <a href="">Harshavi</a>.-->
+<!--    </div>-->
+<!--{% endblock %}-->
