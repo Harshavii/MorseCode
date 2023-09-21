@@ -45,4 +45,4 @@ def convert(input_text):
 
     return ' '.join(output)
 
-app.run(debug=True)
+app.run()
