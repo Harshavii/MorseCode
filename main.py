@@ -45,4 +45,5 @@ def convert(input_text):
 
     return ' '.join(output)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
